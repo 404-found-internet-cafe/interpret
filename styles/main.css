@@ -3,7 +3,7 @@
 
 :root {
   scroll-snap-type: y proximity;
-  background: var(--clr-white-500) url(/assets/images/floating-cogs.svg);
+  background: var(--clr-white-500) url(../assets/images/floating-cogs.svg);
   animation: background-pan 60s infinite;
   background-attachment: fixed;
 }

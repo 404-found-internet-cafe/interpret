@@ -2,18 +2,18 @@
 
 @font-face {
   font-family: "Cristik";
-  src: url(/assets/fonts/Cristik.otf);
+  src: url(../assets/fonts/Cristik.otf);
   font-weight: 400;
 }
 
 @font-face {
   font-family: "Aseprite";
-  src: url(/assets/fonts/AsepriteFont.ttf);
+  src: url(../assets/fonts/AsepriteFont.ttf);
 }
 
 @font-face {
   font-family: "Doto";
-  src: url(/assets/fonts/Doto.ttf);
+  src: url(../assets/fonts/Doto.ttf);
 }
 
 :root {
