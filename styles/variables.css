@@ -1,0 +1,18 @@
+:root {
+  --clr-orange-400: hsl(35, 100%, 50%);
+  --clr-orange-500: hsl(35, 100%, 65%);
+  --clr-orange-600: hsl(35, 100%, 80%);
+
+  --clr-blue-400: hsl(206, 100%, 50%);
+  --clr-blue-500: hsl(206, 100%, 65%);
+  --clr-blue-600: hsl(206, 100%, 80%);
+
+  --clr-white-400: hsl(35, 100%, 95%);
+  --clr-white-500: hsl(35, 100%, 90%);
+  --clr-white-600: hsl(35, 100%, 85%);
+
+  --clr-black-400: hsl(222, 20%, 15%);
+  --clr-black-500: hsl(222, 20%, 20%);
+  --clr-black-600: hsl(222, 20%, 25%);
+  --clr-black-000: hsla(222, 20%, 15%, 0.25);
+}

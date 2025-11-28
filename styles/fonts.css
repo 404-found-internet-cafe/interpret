@@ -1,0 +1,59 @@
+@import url(./variables.css);
+
+@font-face {
+  font-family: "Cristik";
+  src: url(/assets/fonts/Cristik.otf);
+  font-weight: 400;
+}
+
+@font-face {
+  font-family: "Aseprite";
+  src: url(/assets/fonts/AsepriteFont.ttf);
+}
+
+@font-face {
+  font-family: "Doto";
+  src: url(/assets/fonts/Doto.ttf);
+}
+
+:root {
+  font-size: 1.25rem;
+  color: var(--clr-black-400);
+}
+
+p{
+  font-family: "Aseprite";
+  font-size: 2rem;
+  max-width: 75ch;
+
+  &.big {
+    font-size: 3rem;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  --_stroke-color: var(--stroke-color, var(--clr-black-600));
+  --_bump-color: var(--bump-color, var(--clr-black-400));
+  --_stroke-width: var(--stroke-width, 4px);
+  --_bump-height: var(--bump-height, 4px);
+  font-family: "Cristik";
+  font-weight: 400;
+  color: var(--clr-white-400);
+  text-shadow:
+    /* Stroke in all 8 dimensions */
+    var(--_stroke-width) var(--_stroke-width) 0 var(--_stroke-color),
+    calc(var(--_stroke-width) * -1) var(--_stroke-width) 0 var(--_stroke-color),
+    var(--_stroke-width) calc(var(--_stroke-width) * -1) 0 var(--_stroke-color),
+    calc(var(--_stroke-width) * -1) calc(var(--_stroke-width) * -1) 0 var(--_stroke-color),
+    calc(var(--_stroke-width) * -1) 0 0 var(--_stroke-color),
+    0 calc(var(--_stroke-width) * -1) 0 var(--_stroke-color),
+    var(--_stroke-width) 0 0 var(--_stroke-color),
+    0 var(--_stroke-width) 0 var(--_stroke-color),
+    /* Height Bump */
+    var(--_stroke-width) calc(var(--_stroke-width) + var(--_bump-height)) 0 var(--_bump-color),
+    0 calc(var(--_stroke-width) + var(--_bump-height)) 0 var(--_bump-color),
+    calc(var(--_stroke-width) * -1) calc(var(--_stroke-width) + var(--_bump-height)) 0 var(--_bump-color),
+    /* Shadow */
+    0 calc(var(--_bump-height) * 1.5) 1.5rem var(--clr-black-000);
+}

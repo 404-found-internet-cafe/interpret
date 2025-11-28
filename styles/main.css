@@ -1,0 +1,127 @@
+@import url(./variables.css);
+@import url(./animations.css);
+
+:root {
+  scroll-snap-type: y proximity;
+  background: var(--clr-white-500) url(/assets/images/floating-cogs.svg);
+  animation: background-pan 60s infinite;
+  background-attachment: fixed;
+}
+
+button {
+  --_btn-height: var(--btn-height, 0.25rem);
+  font-family: "cristik";
+  border: 2px solid var(--clr-black-400);
+  background-color: var(--clr-white-400);
+  padding: 0.5rem;
+
+  box-shadow: 0 var(--_btn-height) 0 var(--clr-black-400), 0 calc(var(--_btn-height) * 1.5) 2rem var(--clr-black-000);
+  transition: box-shadow 100ms ease, margin 100ms ease, background-color 100ms ease;
+
+  &:hover {
+    background-color: var(--clr-blue-600);
+  }
+  
+  &:active {
+    background-color: var(--clr-blue-500);
+    margin-top: var(--_btn-height);
+    box-shadow: unset;
+    background-repeat: repeat;
+  }
+}
+
+.slide {
+  scroll-snap-align: start;
+  min-height: 100vh;
+  padding: 2rem;
+
+  &:nth-child(even) {
+    background-color: var(--clr-white-600);
+
+  }
+  &:nth-child(odd) {
+    background-color: none;
+  }
+}
+
+.slide.center {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.title-slide {
+  font-size: 2rem;  
+  position: relative;
+  --stroke-width: 6px;
+  --bump-height: 8px;
+
+  * {
+    z-index: 10;
+  }
+
+  h1 {
+    margin-top: -1rem;
+  }
+}
+
+.shuffler-slide {
+  h1 {
+    margin-bottom: 3rem;
+  }
+}
+
+
+.orange {
+  color: var(--clr-orange-400);
+}
+
+.blue {
+  color: var(--clr-blue-400);
+}
+
+.dino-coffee {
+  image-rendering: pixelated;
+  height: 240px;
+  position: relative;
+  z-index: 5;
+  top: 60px;
+}
+
+.shuffle-display {
+  display: grid;
+  grid-template-columns: repeat(10, 1fr);
+  width: 100%;
+  place-items: center;
+  gap: 0.5rem;
+  padding: 1rem;
+}
+.shuffle-display__segment {
+  background-color: var(--clr-white-400);
+  border-radius: 1vh;
+  box-shadow: inset var(--clr-black-000) 0 4px 12px;
+  font-family: "Doto";
+  font-size: 2rem;
+  font-weight: 900;
+  line-height: 0;
+  text-align: center;
+  margin: 0;
+  width: 100%;
+  aspect-ratio: 1 / 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#shuffle-btn {
+  display: block;
+  font-size: 2rem;
+  min-height: 56px;
+  aspect-ratio: 1 / 1;
+
+  &:active {
+    margin-top: var(--_btn-height);
+  }
+}
+
